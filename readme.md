@@ -9,20 +9,17 @@ Usage
 
 You need to pass in the Current Time and the Countdown End Time. You need to pass in the Current time, to avoid any time zone inconsistencies.
 
-jQuery("div").countdowntimer("October 25, 2012 11:13:00", "December 25, 2012 11:13:00")
+    jQuery("div").countdowntimer("October 25, 2012 11:13:00", "December 25, 2012 11:13:00")
 
-jQuery("div").countdowntimer("October 25, 2012 11:13:00", "December 25, 2012 11:13:00", {
-  widgetTitle: "Countdown to Christmas",
-  WidgetEnd: "Happy Christmas"    
-});
+    jQuery("div").countdowntimer("October 25, 2012 11:13:00", "December 25, 2012 11:13:00", {
+      widgetTitle: "Countdown to Christmas",
+      WidgetEnd: "Happy Christmas"    
+    });
 
-Current time - a valid dateString - October 13, 2012 11:13:00 or 2012-10-29 00:00:58
-Event End time - a valid dateString - November 13, 2012 11:13:00 or 2012-11-29 00:00:58
-
-Additional options
-
-widgetTitle - The title of the widget
-widgetEnd - The text which should be displayed when the countdown ends
++ Current time - a valid dateString - October 13, 2012 11:13:00 or 2012-10-29 00:00:58
++ Event End time - a valid dateString - November 13, 2012 11:13:00 or 2012-11-29 00:00:58
++ widgetTitle - The title of the widget
++ widgetEnd - The text which should be displayed when the countdown ends
 
 Dependencies
 ------------
