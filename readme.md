@@ -2,7 +2,7 @@ jQuery Countdown Timer
 ======================
 
 Countdown timer is a jquery plugin which will render a Countdown widget in your app.
-Though this script executes on the client side, it will not have any issues with the users residing in time zones.
+Though this script executes on the client side, it will not have any issues with the users residing in different time zones.
 
 Usage
 -----
