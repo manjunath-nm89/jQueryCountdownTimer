@@ -48,7 +48,6 @@
       var tableDiv = jQuery("<div>");
       var tableObj = jQuery("<table>");
       tableObj.attr({border: "0", cellspacing: "3", cellpadding: "2"});
-      tableObj.css("padding-left", "30px");
       var trCounterRow = jQuery("<tr>").append(generateTdCells(constants.idArray, false));
       var trLegendRow = jQuery("<tr>").append(generateTdCells(constants.legendArray, true));
       tableDiv.append(tableObj.append(trCounterRow).append(trLegendRow));
