@@ -28,13 +28,17 @@
 
     var startTime = new Date(startTime);
     var endTime = new Date(endTime);
-    var diffTime = endTime - startTime;
-    var days = Math.floor((diffTime/86400)/1000);
+    var diffTime = (endTime - startTime)/1000;
+    var days = Math.floor(diffTime/86400);
     var hours = Math.floor((diffTime-(days*86400))/3600);
     var mins = Math.floor((diffTime-(days*86400)-(hours*3600))/60);
     var secs = Math.floor(diffTime-(days*86400)-(hours*3600)-(mins*60));
+    var totalSecs = diffTime;
 
     var divEnclosure = jQuery(this);
+
+    if(divEnclosure.hasClass(constants.enclosingDivClass))
+      return;
 
     divEnclosure.addClass(constants.enclosingDivClass).
       append(getWidgetHeader()).
@@ -74,14 +78,13 @@
     }
 
     var timeEnd = setInterval(countdownTimer,1000);
-    var tsecs = secs;
 
     function countdownTimer(){
 
-      tsecs--;
-      if(tsecs < 0)
+      totalSecs--;
+      if(totalSecs < 0)
       {
-        jQuery("#" + constants.enclosingDivClass).html(settings.WidgetEnd);
+        jQuery("." + constants.enclosingDivClass).html(settings.WidgetEnd);
         clearInterval(timeEnd);
       }
       else
