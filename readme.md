@@ -21,7 +21,7 @@ You need to pass in the Current Time and the Countdown End Time. You need to pas
 + widgetTitle - The title of the widget
 + widgetEnd - The text which should be displayed when the countdown ends
 
-In rails you can,
+In rails you can, pass in the current server time with `Time.now`
     
     <%= javascript_tag do %>
       jQuery("div").countdowntimer("<%= Time.now.utc %>", "December 25, 2012 00:00:00")      
